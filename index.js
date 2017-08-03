@@ -1,23 +1,35 @@
 import { NativeModules } from 'react-native';
 
-const { GpsModule } = NativeModules;
+const { GoogleCastData } = NativeModules;
 
 export default {
-  getLocationUpdates: function () {
-	GpsModule.getLocationUpdates();
+  startScan: function (ApplicationID: ?string) {
+	GoogleCastData.startScan(ApplicationID);
   },
-  getLastKnowLocation: function () {
-	GpsModule.getLastKnowLocation();
+  stopScan: function () {
+	GoogleCastData.stopScan();
   },
-  getCurrentSingleLocation: function () {
-	return GpsModule.getCurrentSingleLocation();
+  isConnected: function () {
+	return GoogleCastData.isConnected();
   },
-  stopLocationUpdate: function () {
-	return GpsModule.stopLocationUpdate();
+  getDevices: function () {
+	return GoogleCastData.getDevices();
   },
-  isGpsEnabled: function () {
-	return GpsModule.isGpsEnabled();
+  connectToDevice: function (deviceId: string) {
+	GoogleCastData.connectToDevice(deviceId);
   },
-  DEVENT_FOUND_LOCATION: GpsModule.EVENT_FOUND_LOCATION,
-  EVENT_TIME_OUT: GpsModule.EVENT_TIME_OUT
+  disconnect: function () {
+	GoogleCastData.disconnect();
+  },
+  sendDataMessage: function (message: string, namespace: string) {
+	GoogleCastData.sendDataMessage(message, namespace);
+  },
+  DEVICE_AVAILABLE: GoogleCastData.DEVICE_AVAILABLE,
+  DEVICE_CONNECTED: GoogleCastData.DEVICE_CONNECTED,
+  DEVICE_DISCONNECTED: GoogleCastData.DEVICE_DISCONNECTED,
+  MEDIA_LOADED: GoogleCastData.MEDIA_LOADED,
+  APP_FAILED: GoogleCastData.APP_FAILED,
+  MSG_SEND_FAILED: GoogleCastData.MSG_SEND_FAILED,
+  MSG_RECEIVED: GoogleCastData.MSG_RECEIVED,
+
 };

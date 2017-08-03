@@ -1,7 +1,7 @@
 {
-  "name": "react-native-gps-module",
-  "version": "1.0.0",
-  "description": "simple light weight gps library useing existing android native library",
+  "name": "react-native-google-data-cast",
+  "version": "1.3.0",
+  "description": "Chromecast library for Android Only",
   "main": "index.js",
   "author": {
     "name": "Jayesh Malviya",
@@ -11,7 +11,8 @@
   "keywords": [
     "react-native",
     "android",
-    "gps",
-    "location"
+    "chromecast",
+    "google",
+    "cast"
   ]
 }

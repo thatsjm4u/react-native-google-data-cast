@@ -9,15 +9,14 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-
         ndk {
-                abiFilters "armeabi-v7a", "x86"
-            }
-        }
-            lintOptions {
-                warning 'InvalidPackage'
-            }
+            abiFilters "armeabi-v7a", "x86"
     }
+        }
+    lintOptions {
+       warning 'InvalidPackage'
+    }
+}
 
 repositories {
     mavenCentral()
@@ -25,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.facebook.react:react-native:+'
-    compile 'com.github.mohanmanu484:Location-track-library:2.0'
+    compile 'com.google.android.libraries.cast.companionlibrary:ccl:+'
 }
