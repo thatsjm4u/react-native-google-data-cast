@@ -1,0 +1,17 @@
+{
+  "name": "react-native-gps-module",
+  "version": "1.0.0",
+  "description": "simple light weight gps library useing existing android native library",
+  "main": "index.js",
+  "author": {
+    "name": "Jayesh Malviya",
+    "email": "thatsjm4u@rediffmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "android",
+    "gps",
+    "location"
+  ]
+}
